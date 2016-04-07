@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "scale" : "1x",
+      "filename" : "circle_unline.png"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "circle_unline@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x",
+      "filename" : "circle_unline@3x.png"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

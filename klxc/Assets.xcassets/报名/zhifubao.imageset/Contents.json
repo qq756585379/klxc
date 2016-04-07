@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "scale" : "1x",
+      "filename" : "zhifubao.png"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "zhifubao@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x",
+      "filename" : "zhifubao@3x.png"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

@@ -1,0 +1,99 @@
+//
+//  YJHttpRequest.m
+//  YJWeibo-oc
+//
+//  Created by sctto on 16/3/23.
+//  Copyright © 2016年 sctto. All rights reserved.
+//
+
+#import "YJHttpRequest.h"
+#import "AFNetworking.h"
+
+#define OnNetTip [NSString stringWithFormat:@"联网成功"]
+#define OffNetTip [NSString stringWithFormat:@"没联网哦"]
+#define BadNetTip [NSString stringWithFormat:@"请求超时，请稍后再试"]
+#define BadSeverTip [NSString stringWithFormat:@"服务器链接失败"]
+#define UnknownError [NSString stringWithFormat:@"出错啦"]
+
+@implementation YJHttpRequest
+
++ (void)get:(NSString *)url params:(NSDictionary *)params success:(void (^)(id json))success failure:(void (^)(NSError *error))failure
+{
+    // 1.创建请求管理者
+    AFHTTPSessionManager *manager=[AFHTTPSessionManager manager];
+    manager.responseSerializer=[AFHTTPResponseSerializer serializer];
+//    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+
+    manager.responseSerializer.acceptableContentTypes =[NSSet setWithObjects:@"application/json", @"text/html",@"text/json",@"text/javascript",@"text/plain", nil];
+    
+    // 2.发送请求
+    [manager GET:url parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+//        NSString *backData=[[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        
+        NSString *jsonString = [[NSString alloc] initWithBytes:[responseObject bytes] length:[responseObject length] encoding:NSUTF8StringEncoding];
+        
+        NSString *backData1=[jsonString substringToIndex:jsonString.length-1];
+        
+        NSInteger subStringLocation=[backData1 rangeOfString:@"callback("].location;
+        
+        NSString *backData2=[backData1 substringFromIndex:subStringLocation+9];
+        
+//        YJLog(@"+++%@",backData2);
+        
+        NSData *data=[backData2 dataUsingEncoding:NSUTF8StringEncoding];
+        
+        id backData3=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        success(backData3);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        failure(error);
+    }];
+}
+
++ (void)post:(NSString *)url params:(NSDictionary *)params success:(void (^)(id json))success failure:(void (^)(NSError *error))failure
+{
+    AFHTTPSessionManager *manager=[AFHTTPSessionManager manager];
+    manager.responseSerializer=[AFHTTPResponseSerializer serializer];
+    
+//    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    
+    manager.responseSerializer.acceptableContentTypes =[NSSet setWithObjects:@"application/json", @"text/html",@"text/json",@"text/javascript",@"text/plain", nil];
+    
+    [manager POST:url parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSString *backData=[[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        NSString *backData1=[backData substringFromIndex:12];
+        NSString *backData2=[backData1 substringToIndex:backData1.length-1];
+        YJLog(@"%@",backData);
+        NSData *data=[backData2 dataUsingEncoding:NSUTF8StringEncoding];
+        id backData3=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        success(backData3);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        failure(error);
+    }];
+}
+
+//Creating an Upload Task
++ (void)createAnUploadTask:(NSString *)urlStr imageData:(NSData *)imageData andParameters:(NSDictionary *)paramDic success:(void (^)(id json))success failure:(void (^)(NSError *error))failure{
+
+    AFHTTPSessionManager *manager=[AFHTTPSessionManager manager];
+    [manager.requestSerializer setValue:@"multipart/form-data" forHTTPHeaderField:@"Content-Type"];
+    
+    [manager POST:urlStr parameters:paramDic constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        [formData appendPartWithFileData:imageData name:@"pic" fileName:@"pic.jpg" mimeType:@"application/octet-stream"];
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        success(responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        failure(error);
+    }];
+}
+
+@end

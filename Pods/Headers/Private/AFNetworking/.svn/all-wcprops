@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/klxc/!svn/ver/97/IOS/Code/klxc/Pods/Headers/Private/AFNetworking
+END
+AFSecurityPolicy.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/klxc/!svn/ver/97/IOS/Code/klxc/Pods/Headers/Private/AFNetworking/AFSecurityPolicy.h
+END
+AFNetworking.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/klxc/!svn/ver/97/IOS/Code/klxc/Pods/Headers/Private/AFNetworking/AFNetworking.h
+END
+UIWebView+AFNetworking.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/klxc/!svn/ver/97/IOS/Code/klxc/Pods/Headers/Private/AFNetworking/UIWebView+AFNetworking.h
+END
+AFAutoPurgingImageCache.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/klxc/!svn/ver/97/IOS/Code/klxc/Pods/Headers/Private/AFNetworking/AFAutoPurgingImageCache.h
+END
+UIButton+AFNetworking.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/klxc/!svn/ver/97/IOS/Code/klxc/Pods/Headers/Private/AFNetworking/UIButton+AFNetworking.h
+END
+UIImageView+AFNetworking.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/klxc/!svn/ver/97/IOS/Code/klxc/Pods/Headers/Private/AFNetworking/UIImageView+AFNetworking.h
+END
+AFNetworkActivityIndicatorManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/klxc/!svn/ver/97/IOS/Code/klxc/Pods/Headers/Private/AFNetworking/AFNetworkActivityIndicatorManager.h
+END
+AFURLSessionManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/klxc/!svn/ver/97/IOS/Code/klxc/Pods/Headers/Private/AFNetworking/AFURLSessionManager.h
+END
+AFImageDownloader.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/klxc/!svn/ver/97/IOS/Code/klxc/Pods/Headers/Private/AFNetworking/AFImageDownloader.h
+END
+UIImage+AFNetworking.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/klxc/!svn/ver/97/IOS/Code/klxc/Pods/Headers/Private/AFNetworking/UIImage+AFNetworking.h
+END
+UIActivityIndicatorView+AFNetworking.h
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/klxc/!svn/ver/97/IOS/Code/klxc/Pods/Headers/Private/AFNetworking/UIActivityIndicatorView+AFNetworking.h
+END
+AFNetworkReachabilityManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/klxc/!svn/ver/97/IOS/Code/klxc/Pods/Headers/Private/AFNetworking/AFNetworkReachabilityManager.h
+END
+UIKit+AFNetworking.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/klxc/!svn/ver/97/IOS/Code/klxc/Pods/Headers/Private/AFNetworking/UIKit+AFNetworking.h
+END
+AFURLRequestSerialization.h
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/klxc/!svn/ver/97/IOS/Code/klxc/Pods/Headers/Private/AFNetworking/AFURLRequestSerialization.h
+END
+AFHTTPSessionManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/klxc/!svn/ver/97/IOS/Code/klxc/Pods/Headers/Private/AFNetworking/AFHTTPSessionManager.h
+END
+AFURLResponseSerialization.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/klxc/!svn/ver/97/IOS/Code/klxc/Pods/Headers/Private/AFNetworking/AFURLResponseSerialization.h
+END
+UIProgressView+AFNetworking.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/klxc/!svn/ver/97/IOS/Code/klxc/Pods/Headers/Private/AFNetworking/UIProgressView+AFNetworking.h
+END
+UIRefreshControl+AFNetworking.h
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/klxc/!svn/ver/97/IOS/Code/klxc/Pods/Headers/Private/AFNetworking/UIRefreshControl+AFNetworking.h
+END

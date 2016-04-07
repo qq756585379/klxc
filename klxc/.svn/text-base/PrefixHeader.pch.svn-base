@@ -1,0 +1,74 @@
+//
+//  PrefixHeader.pch
+//  百思姐
+//
+//  Created by sctto on 16/3/22.
+//  Copyright © 2016年 sctto. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "UIView+YJExtension.h"
+#import "UIBarButtonItem+YJExtension.h"
+#import "YJConst.h"
+#import "YJHttpRequest.h"
+#import "SVProgressHUD.h"
+#import "NSString+YJExtension.h"
+#import "UIImageView+WebCache.h"
+#import "MJExtension.h"
+
+#define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
+
+/**打印*/
+#ifdef DEBUG
+#define YJLog(...) NSLog(__VA_ARGS__)
+#else
+#define YJLog(...)
+#endif
+//
+#define YJLogFunc YJLog(@"%s", __func__)
+/**颜色*/
+#define RGBCOLOR(r,g,b)           [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
+#define RGBACOLOR(r,g,b,a)        [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+#define YJGlobalBg                RGBCOLOR(223, 223, 223)
+#define HEXCOLOR(c)               [UIColor colorWithRed:((c>>16)&0xFF)/255.0f green:((c>>8)&0xFF)/255.0f blue:(c&0xFF)/255.0f alpha:1.0f];
+#define UIColorFromRGBA(rgbValue, alphaValue) [UIColor colorWithRed : ((float)((rgbValue & 0xFF0000) >> 16)) / 255.0 green : ((float)((rgbValue & 0x00FF00) >> 8)) / 255.0 blue : ((float)(rgbValue & 0x0000FF)) / 255.0 alpha : alphaValue]
+//
+#define ScreenW                   [UIScreen mainScreen].bounds.size.width
+#define ScreenH                   [UIScreen mainScreen].bounds.size.height
+//
+#define YJAppDelegate             ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+#define YJWindow                  ((UIWindow *)[[UIApplication sharedApplication] keyWindow])
+//
+#define USER_DEFAULT              [NSUserDefaults standardUserDefaults]
+#define NOTIFICATION_CENTER       [NSNotificationCenter defaultCenter]
+
+#define AccountPath               [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"account.archive"]
+/**
+ * Url
+ */
+#define kAbs(__MAINURL__, __CHILDURL__)    [NSString stringWithFormat:@"%@%@", __MAINURL__, __CHILDURL__]
+/**登录*/
+#define LOGINURL                           @"http://120.24.93.193/srvapi/framework?c=passportCtr&a=loginAction&callback=callback&telephone=%@&login_pwd=%@"
+/**注册*/
+#define RegistUrl                          @"http://120.24.93.193/srvapi/framework?c=passportCtr&a=registerAction&callback=callback&telephone=%@&login_pwd=%@&login_common_pwd=%@&user_name=%@&user_city=%@"
+
+/**获取短信*/
+#define GetRegVerifyCode                   @"http://120.24.93.193/srvapi/framework?c=smsCtr&a=getRegVerifyidAction&callback=callback&telephone=%@"
+/**短信验证*/
+#define VerifySMSCode                      @"http://120.24.93.193/srvapi/framework?c=smsCtr&a=verifySMSAction&callback=callback&tid=%@&verify_code=%@"
+
+/*获取教练的信息*/
+#define GetCoachListUrl                    @"http://120.24.93.193/srvapi/framework?c=coachInfoCtr&a=getCoachList&callback=callback&coach_city=%@"
+/**getCoachListOrderByPrice*/
+#define GetCoachListOrderByPriceUrl        @"http://120.24.93.193/srvapi/framework?c=coachInfoCtr&a=getCoachListOrderByPrice&callback=callback&coach_city=%@&tid=%@"
+/**addcoachInfoCtr*/
+#define AddCoachInfoCtrUrl                 @"http://120.24.93.193/srvapi/framework?c=coachInfoCtr&a=add&callback=callback&coach_name=%@&coach_sex=%@&coach_school_age=%@&coach_driving_years=%@&coach_school_name=%@&coach_lesson=%@&coach_price=%@&coach_city=%@&coach_address=%@"
+
+/**queryUserinfo*/
+#define GetUserinfoUrl                     @"http://120.24.93.193/srvapi/framework?c=userInfoCtr&a=queryUserinfo&token=%@&callback=callback&tid=%@"
+
+                       
+
+#endif /* PrefixHeader_pch */

@@ -1,0 +1,47 @@
+//
+//  CoachModel.h
+//  klxc
+//
+//  Created by sctto on 16/3/29.
+//  Copyright © 2016年 sctto. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface CoachModel : NSObject
+
+@property(nonatomic,copy)NSString *coach_address;
+@property(nonatomic,copy)NSString *coach_city;
+@property(nonatomic,copy)NSString *coach_driving_years;
+@property(nonatomic,copy)NSString *coach_favicon_url;
+@property(nonatomic,copy)NSString *coach_image1_url;
+@property(nonatomic,copy)NSString *coach_image2_url;
+@property(nonatomic,copy)NSString *coach_lesson;
+@property(nonatomic,copy)NSString *coach_name;
+@property(nonatomic,copy)NSString *coach_price;
+@property(nonatomic,copy)NSString *coach_school_age;
+@property(nonatomic,copy)NSString *coach_school_name;
+@property(nonatomic,copy)NSString *coach_sex;
+@property(nonatomic,copy)NSString *tid;
+
+-(instancetype)initWithDict:(NSDictionary *)dict;
+
+/**
+ {
+ "coach_address" = "\U95f5\U884c\U533a\U8398\U5efa\U4e1c\U8def58\U5f04\U7ec3\U8f66\U573a";
+ "coach_city" = "\U4e0a\U6d77";
+ "coach_driving_years" = 15;
+ "coach_favicon_url" = "http://120.24.93.193/image/1_1.png";
+ "coach_image1_url" = "http://120.24.93.193/image/1_2.png";
+ "coach_image2_url" = "http://120.24.93.193/image/1_3.png";
+ "coach_lesson" = C1;
+ "coach_name" = "\U9ec4\U5efa\U519b";
+ "coach_price" = "0.01";
+ "coach_school_age" = 5;
+ "coach_school_name" = "\U4e0a\U6d77\U8363\U5b89\U9a7e\U6821";
+ "coach_sex" = 0;
+ tid = 1;
+ },
+ */
+
+@end

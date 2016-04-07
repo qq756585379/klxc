@@ -1,0 +1,65 @@
+//
+//  LoginVC.m
+//  快来学车
+//
+//  Created by sctto on 16/3/23.
+//  Copyright © 2016年 sctto. All rights reserved.
+//
+
+#import "LoginVC.h"
+#import "RegistVC.h"
+
+@interface LoginVC ()
+
+@property (weak, nonatomic) IBOutlet UITextField *TelTF;
+@property (weak, nonatomic) IBOutlet UITextField *PwdTF;
+
+@end
+
+@implementation LoginVC
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.hidden=YES;
+}
+
+- (IBAction)dismissBtnClicked:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)forgetPwdBtnClicked {
+    UIStoryboard *sb=[UIStoryboard storyboardWithName:@"YJ_Storyboard" bundle:nil];
+    RegistVC *forgetVc=[sb instantiateViewControllerWithIdentifier:@"RegistVC"];
+    forgetVc.titleStr=@"找回密码";
+    forgetVc.ctrlType=YJFindPasswordCtrl;
+    [self.navigationController pushViewController:forgetVc animated:YES];
+}
+
+- (IBAction)RegistBtnClicked:(UIButton *)sender {
+    UIStoryboard *sb=[UIStoryboard storyboardWithName:@"YJ_Storyboard" bundle:nil];
+    RegistVC *registVc=[sb instantiateViewControllerWithIdentifier:@"RegistVC"];
+    registVc.titleStr=@"注册";
+    registVc.ctrlType=YJRegistCtrl;
+    [self.navigationController pushViewController:registVc animated:YES];
+}
+
+- (IBAction)LoginBtnClicked:(UIButton *)sender {
+
+//    ChooseCoachVC *choose=[[ChooseCoachVC alloc] init];
+//    [self.navigationController pushViewController:choose animated:YES];
+    
+    [YJHttpRequest get:[NSString stringWithFormat:LOGINURL,@"13376275127",@"123123"] params:nil success:^(id json) {
+        YJLog(@"%@",json);
+    } failure:^(NSError *error) {
+        YJLog(@"+++++%@",error);
+    }];
+    
+}
+
+
+@end

@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "1b72c0c0-58df-1d4d-9e04-cdda67704e9a++2851",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "1b72c0c0-58df-1d4d-9e04-cdda67704e9a++2851" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "1b72c0c0-58df-1d4d-9e04-cdda67704e9a++2851" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "28F32262-3DBF-46E3-ADE2-ADAD9A7E8859",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "1b72c0c0-58df-1d4d-9e04-cdda67704e9a++2851" : "klxc\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "klxc",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "klxc.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/192.168.1.146\/svn\/klxc",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1b72c0c0-58df-1d4d-9e04-cdda67704e9a++2851"
+    }
+  ]
+}

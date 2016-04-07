@@ -1,0 +1,71 @@
+//
+//  Account.h
+//  klxc
+//
+//  Created by sctto on 16/3/30.
+//  Copyright © 2016年 sctto. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface Account : NSObject
+
+@property(nonatomic,copy)NSString *coach_tid;
+@property(nonatomic,copy)NSString *invitation_code;
+@property(nonatomic,copy)NSString *login_common_pwd;
+@property(nonatomic,copy)NSString *telephone;
+@property(nonatomic,assign)NSNumber *tid;
+@property(nonatomic,copy)NSString *token;
+@property(nonatomic,copy)NSString *user_city;
+@property(nonatomic,copy)NSString *user_name;
+
+/*
+ {
+ code = 0;
+ data =     (
+ {
+ balance = "<null>";
+ "coach_tid" = "<null>";
+ 
+ "create_time" = "2016-03-30 11:33:39";
+ 
+ "fast_count" = 0;
+ 
+ "invitation_code" = 1533;
+ 
+ "login_common_pwd" = 123123;  密码
+ "login_pwd" = 296479;验证码
+ "login_time" = "2016-03-30 11:33:39";
+ "open_id" = "<null>";
+ "sc_tid" = "<null>";
+ "spelling_class_state" = 0;
+ telephone = 13376275127;
+ 
+ tid = 1533;
+ 
+ token = "BXABMlc6VWQMLVZaVmsLaQ==";
+ "user_ID_card" = "<null>";
+ "user_add_class" = 0;
+ "user_address" = "<null>";
+ "user_age" = "<null>";
+ "user_area" = "<null>";
+ "user_change_state" = 0;
+ "user_city" = "\U65e0\U9521";
+ "user_free_count" = 0;
+ "user_free_num" = 0;
+ "user_grade" = "<null>";
+ "user_image" = "<null>";
+ "user_integral" = "<null>";
+ "user_name" = "\U6768\U4fca";
+ "user_nextmonth_state" = 0;
+ "user_sex" = "<null>";
+ "user_source" = 0;
+ "user_type" = 0;
+ "user_wallet_tid" = "<null>";
+ }
+ );
+ msg = "\U6ce8\U518c\U6210\U529f";
+ pages = 1;
+ }
+ */
+@end
