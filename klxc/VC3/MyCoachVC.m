@@ -8,10 +8,6 @@
 
 #import "MyCoachVC.h"
 
-@interface MyCoachVC ()
-
-@end
-
 @implementation MyCoachVC
 
 - (void)viewDidLoad {
@@ -23,6 +19,5 @@
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden=NO;
 }
-
 
 @end

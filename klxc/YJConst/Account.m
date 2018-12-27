@@ -11,6 +11,7 @@
 @interface Account()<NSCoding>
 
 @end
+
 @implementation Account
 
 MJCodingImplementation

@@ -8,10 +8,6 @@
 
 #import "YJDropVC.h"
 
-@interface YJDropVC ()
-
-@end
-
 @implementation YJDropVC
 
 - (void)viewDidLoad {
@@ -30,8 +26,5 @@
     cell.textLabel.text=@"11";
     return cell;
 }
-
-
-
 
 @end

@@ -9,10 +9,8 @@
 #import "InvitationCodeVC.h"
 
 @interface InvitationCodeVC ()
-
 @property (weak, nonatomic) IBOutlet UIView *topView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topDistance;
-
 @end
 
 @implementation InvitationCodeVC

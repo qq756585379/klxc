@@ -15,9 +15,7 @@
 #import "SingleInfoVC.h"
 
 @interface MineViewController ()
-
 @property (weak, nonatomic) IBOutlet UIButton *iconBtn;
-
 @end
 
 @implementation MineViewController
@@ -34,8 +32,6 @@
 }
 
 - (IBAction)iconBtnClicked:(UIButton *)sender {
-    
-//    UIStoryboard *sb=[UIStoryboard storyboardWithName:@"YJ_Storyboard" bundle:nil];
     //判断沙盒有没有Account
     Account *account=[AccountTool account];
     if (account) {
@@ -61,6 +57,5 @@
         [self.navigationController pushViewController:[[AgreementVC alloc] init] animated:YES];
     }
 }
-
 
 @end

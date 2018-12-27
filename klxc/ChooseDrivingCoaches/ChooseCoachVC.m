@@ -11,10 +11,6 @@
 #import "YJDropView.h"
 #import "DrivingCoachesCell.h"
 
-@interface ChooseCoachVC ()
-
-@end
-
 @implementation ChooseCoachVC
 
 static NSString *const CellId = @"DrivingCoachesCell";

@@ -11,7 +11,6 @@
 #import "MaskView.h"
 
 @interface SingleInfoVC ()<MaskViewDelegate>
-
 @property (weak, nonatomic) IBOutlet UIView      *bgView;
 @property (weak, nonatomic) IBOutlet UIImageView *iconIV;
 @property (weak, nonatomic) IBOutlet UILabel     *nameLabel;

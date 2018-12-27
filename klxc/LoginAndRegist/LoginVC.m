@@ -12,10 +12,8 @@
 #import "AccountTool.h"
 
 @interface LoginVC ()
-
 @property (weak, nonatomic) IBOutlet UITextField *TelTF;
 @property (weak, nonatomic) IBOutlet UITextField *PwdTF;
-
 @end
 
 @implementation LoginVC
@@ -35,7 +33,6 @@
 }
 
 - (IBAction)forgetPwdBtnClicked {
-    
     RegistVC *forgetVc=[sb instantiateViewControllerWithIdentifier:@"RegistVC"];
     forgetVc.titleStr=@"找回密码";
     forgetVc.ctrlType=YJFindPasswordCtrl;
@@ -44,10 +41,7 @@
 
 #pragma mark - 登录
 - (IBAction)LoginBtnClicked:(UIButton *)sender {
-    
-    [YJHttpRequest get:[NSString stringWithFormat:LOGINURL,@"1321111111",@"123456"] params:nil success:^(id json)
-        {
-            
+    [YJHttpRequest get:[NSString stringWithFormat:LOGINURL,@"1321111111",@"123456"] params:nil success:^(id json){
         if ([json[@"code"] isEqualToNumber:@0]) {//登录成功
             YJLog(@"%@",json);
             Account *account=[Account mj_objectWithKeyValues:json[@"data"]];
@@ -61,6 +55,5 @@
         YJLog(@"+++++%@",error);
     }];
 }
-
 
 @end

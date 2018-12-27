@@ -12,10 +12,6 @@
 #import "CoachVC.h"
 #import "MineViewController.h"
 
-@interface YJTabBarVC ()
-
-@end
-
 @implementation YJTabBarVC
 
 + (void)initialize{
@@ -36,9 +32,8 @@
     [super viewDidLoad];
     MainViewController *mainVc=[[MainViewController alloc] init];
     CoachVC *coach=[[CoachVC alloc] init];
-//    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"YJ_Storyboard" bundle:nil];
-    MineViewController *mine=[sb instantiateViewControllerWithIdentifier:@"MineViewController"];
     
+    MineViewController *mine = [sb instantiateViewControllerWithIdentifier:@"MineViewController"];
     
     [self setupChildVc:mainVc title:@"首页" image:@"index" selectedImage:@"index_on"];
     [self setupChildVc:coach title:@"教练" image:@"teacher" selectedImage:@"teacher_on"];
@@ -51,7 +46,6 @@
 }
 
 - (void)setupChildVc:(UIViewController *)vc title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage{
-    //
     vc.navigationItem.title = title;
     vc.tabBarItem.title = title;
     vc.tabBarItem.image = [UIImage imageNamed:image];

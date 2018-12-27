@@ -8,10 +8,6 @@
 
 #import "YJNav.h"
 
-@interface YJNav ()
-
-@end
-
 @implementation YJNav
 
 + (void)initialize{
@@ -39,7 +35,6 @@
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
     
     if (self.childViewControllers.count > 0) { // 如果push进来的不是第一个控制器
-        //
         self.interactivePopGestureRecognizer.enabled = YES;
         
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];

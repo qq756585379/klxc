@@ -9,9 +9,7 @@
 #import "YJDropView.h"
 
 @interface YJDropView()
-
 @property (nonatomic, strong) UIView *contentView;
-
 @end
 
 @implementation YJDropView
@@ -48,21 +46,24 @@
 /**
  *  显示
  */
-- (void)showFrom:(UIView *)fromView{
+- (void)showFrom:(UIView *)fromView
+{
     UIWindow *window = [[UIApplication sharedApplication].windows lastObject];
     [window addSubview:self];
     self.frame = window.bounds;
-    
 }
 
 /**
  *  销毁
  */
-- (void)dismiss{
+- (void)dismiss
+{
     [self removeFromSuperview];
 }
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [self dismiss];
 }
+
 @end

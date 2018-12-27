@@ -11,10 +11,8 @@
 #import "RegistVC.h"
 
 @interface GetVerifyCodeVC ()
-
 @property (weak, nonatomic) IBOutlet UITextField *TelTF;
 @property (weak, nonatomic) IBOutlet UIButton *getCodeBtn;
-
 @end
 
 @implementation GetVerifyCodeVC

@@ -9,9 +9,7 @@
 #import "BaoMingVC.h"
 
 @interface BaoMingVC ()
-
 @property (nonatomic, weak) UIView *myView;
-
 @end
 
 @implementation BaoMingVC
@@ -71,15 +69,5 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return 0.1;
 }
-
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-//    
-//    // Configure the cell...
-//    
-//    return cell;
-//}
-
-
 
 @end

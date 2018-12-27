@@ -32,8 +32,6 @@
 		775D66031CA3891A0072C511 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 775D66021CA3891A0072C511 /* main.m */; };
 		775D66061CA3891A0072C511 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 775D66051CA3891A0072C511 /* AppDelegate.m */; };
 		775D660E1CA3891A0072C511 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 775D660D1CA3891A0072C511 /* Assets.xcassets */; };
-		775D661C1CA3891A0072C511 /* klxcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 775D661B1CA3891A0072C511 /* klxcTests.m */; };
-		775D66271CA3891A0072C511 /* klxcUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 775D66261CA3891A0072C511 /* klxcUITests.m */; };
 		775D66351CA395D10072C511 /* YJ_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 775D66341CA395D10072C511 /* YJ_Storyboard.storyboard */; };
 		775D663A1CA396360072C511 /* UIView+YJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 775D66391CA396360072C511 /* UIView+YJExtension.m */; };
 		775D663D1CA396450072C511 /* UIBarButtonItem+YJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 775D663C1CA396450072C511 /* UIBarButtonItem+YJExtension.m */; };
@@ -135,11 +133,7 @@
 		775D660D1CA3891A0072C511 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		775D66121CA3891A0072C511 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		775D66171CA3891A0072C511 /* klxcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = klxcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		775D661B1CA3891A0072C511 /* klxcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = klxcTests.m; sourceTree = "<group>"; };
-		775D661D1CA3891A0072C511 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		775D66221CA3891A0072C511 /* klxcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = klxcUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		775D66261CA3891A0072C511 /* klxcUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = klxcUITests.m; sourceTree = "<group>"; };
-		775D66281CA3891A0072C511 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		775D66341CA395D10072C511 /* YJ_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = YJ_Storyboard.storyboard; sourceTree = "<group>"; };
 		775D66361CA395E40072C511 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		775D66381CA396360072C511 /* UIView+YJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YJExtension.h"; sourceTree = "<group>"; };
@@ -318,8 +312,6 @@
 			isa = PBXGroup;
 			children = (
 				775D66001CA3891A0072C511 /* klxc */,
-				775D661A1CA3891A0072C511 /* klxcTests */,
-				775D66251CA3891A0072C511 /* klxcUITests */,
 				775D65FF1CA3891A0072C511 /* Products */,
 				721ED31F65B8DE838D858326 /* Pods */,
 				7AFB6258A5152CEB3DC2777A /* Frameworks */,
@@ -368,24 +360,6 @@
 				775D66021CA3891A0072C511 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		775D661A1CA3891A0072C511 /* klxcTests */ = {
-			isa = PBXGroup;
-			children = (
-				775D661B1CA3891A0072C511 /* klxcTests.m */,
-				775D661D1CA3891A0072C511 /* Info.plist */,
-			);
-			path = klxcTests;
-			sourceTree = "<group>";
-		};
-		775D66251CA3891A0072C511 /* klxcUITests */ = {
-			isa = PBXGroup;
-			children = (
-				775D66261CA3891A0072C511 /* klxcUITests.m */,
-				775D66281CA3891A0072C511 /* Info.plist */,
-			);
-			path = klxcUITests;
 			sourceTree = "<group>";
 		};
 		775D66371CA396270072C511 /* Category */ = {
@@ -761,7 +735,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				775D661C1CA3891A0072C511 /* klxcTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -769,7 +742,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				775D66271CA3891A0072C511 /* klxcUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

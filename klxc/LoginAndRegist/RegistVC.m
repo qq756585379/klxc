@@ -19,7 +19,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *VerifyCodeTF;
 @property (weak, nonatomic) IBOutlet UITextField *PwdTF;
 @property (weak, nonatomic) IBOutlet UIView *buttomBgView;
-
 @end
 
 @implementation RegistVC
@@ -30,8 +29,6 @@
     self.navigationController.navigationBar.hidden=NO;
     if (_ctrlType==YJFindPasswordCtrl) {
         self.buttomBgView.hidden=YES;
-    }else{
-        
     }
     
     _TelTF.text=@"13376275127";
@@ -39,16 +36,12 @@
 }
 
 - (IBAction)doneBtnClicked:(UIButton *)sender {
-    
     [YJHttpRequest get:[NSString stringWithFormat:VerifySMSCode,_tid,_VerifyCodeTF.text] params:nil success:^(id json) {
         
         YJLog(@"短信验证:%@",json);
       
-       
         [YJHttpRequest get:nil params:nil success:^(id json) {
             
-            
-           
         } failure:^(NSError *error) {
             
         }];
@@ -61,13 +54,11 @@
 
 #pragma mark - 获取验证码
 - (IBAction)timeBtnClicked:(UIButton *)sender {
-    
     [YJHttpRequest get:[NSString stringWithFormat:GetRegVerifyCode,@"13376275127"] params:nil success:^(id json) {
         YJLog(@"%@",json);
         NSArray *data=json[@"data"];
         if (data!=nil) {
             _tid=[data[0] objectForKey:@"tid"];
-//            _verifyCode=
         }
     } failure:^(NSError *error) {
         YJLog(@"+++++%@",error);
@@ -87,6 +78,5 @@
     AgreementVC *agreeVc=[[AgreementVC alloc] init];
     [self.navigationController pushViewController:agreeVc animated:YES];
 }
-
 
 @end

@@ -8,10 +8,6 @@
 
 #import "MyOrderVC.h"
 
-@interface MyOrderVC ()
-
-@end
-
 @implementation MyOrderVC
 
 - (void)viewDidLoad {

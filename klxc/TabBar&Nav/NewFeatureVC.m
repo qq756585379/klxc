@@ -8,13 +8,12 @@
 
 #import "NewFeatureVC.h"
 #import "YJTabBarVC.h"
+
 #define NewfeatureCount 3
 
 @interface NewFeatureVC () <UIScrollViewDelegate>
-
 @property (nonatomic, weak) UIPageControl *pageControl;
 @property (nonatomic, weak) UIScrollView *scrollView;
-
 @end
 
 @implementation NewFeatureVC
@@ -35,7 +34,7 @@
     scrollView.pagingEnabled = YES;
     scrollView.showsHorizontalScrollIndicator = NO;
     scrollView.delegate = self;
-    //
+    
     UIPageControl *pageControl = [[UIPageControl alloc] init];
     pageControl.numberOfPages = NewfeatureCount;
     pageControl.backgroundColor = [UIColor redColor];
@@ -53,11 +52,11 @@
     self.pageControl.currentPage = (int)(page + 0.5);
 }
 
--(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+-(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
     if (scrollView.contentOffset.x+ScreenW>ScreenW*NewfeatureCount) {
         YJWindow.rootViewController=[[YJTabBarVC alloc] init];
     }
 }
-
 
 @end
