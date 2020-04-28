@@ -33,7 +33,7 @@
     [YJHttpRequest get:[NSString stringWithFormat:GetRegVerifyCode,_TelTF.text] params:nil success:^(id json) {
         if ([json[@"code"] isEqualToNumber:@0]) {
             YJLog(@"%@",json);
-            RegistVC *forgetVc=[sb instantiateViewControllerWithIdentifier:@"RegistVC"];
+//            RegistVC *forgetVc=[sb instantiateViewControllerWithIdentifier:@"RegistVC"];
             
         }
     } failure:^(NSError *error) {

@@ -21,7 +21,8 @@
     
     NSMutableDictionary *selectedAttrs = [NSMutableDictionary dictionary];
     selectedAttrs[NSFontAttributeName] = attrs[NSFontAttributeName];
-    selectedAttrs[NSForegroundColorAttributeName] = RGBCOLOR(34, 200, 169);
+//    selectedAttrs[NSForegroundColorAttributeName] = RGBCOLOR(34, 200, 169);
+    selectedAttrs[NSForegroundColorAttributeName] = [UIColor redColor];
     
     UITabBarItem *item = [UITabBarItem appearance];
     [item setTitleTextAttributes:attrs forState:UIControlStateNormal];
@@ -32,7 +33,7 @@
     [super viewDidLoad];
     MainViewController *mainVc=[[MainViewController alloc] init];
     CoachVC *coach=[[CoachVC alloc] init];
-    
+
     MineViewController *mine = [sb instantiateViewControllerWithIdentifier:@"MineViewController"];
     
     [self setupChildVc:mainVc title:@"首页" image:@"index" selectedImage:@"index_on"];
